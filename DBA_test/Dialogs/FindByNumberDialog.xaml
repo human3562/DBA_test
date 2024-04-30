@@ -1,0 +1,30 @@
+﻿<Window x:Class="DBA_test.Dialogs.FindByNumberDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DBA_test.Dialogs"
+        mc:Ignorable="d"       
+        ShowInTaskbar="False"
+        WindowStartupLocation="CenterOwner"
+        Title="Поиск по номеру" MinHeight="150" MinWidth="400" Height="150" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <!--<Label Grid.Row="0" FontSize="24" Content="Поиск по номеру" />-->
+
+        <StackPanel Grid.Row="1" Margin="5 0 5 0">
+            <Label Content="Номер:" FontSize="18"/>
+            <TextBox Name="numberTextBox" FontSize="18" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button FontSize="18" Padding="5" IsDefault="True" Content="Поиск" Margin="0 0 10 5" Click="Button_Click"/>
+            <Button FontSize="18" Padding="5" IsCancel="True" Content="Отмена" Margin="10 0 5 5"/>
+        </StackPanel>
+    </Grid>
+</Window>
